@@ -1,6 +1,6 @@
-##project django
+## project django
 
-#task:
+# task:
 
 - add nou view la ruta /exercitiu.
 - view ul trebuie sa afiseze mesajul: "numele meu este ...si am ...animale de companie". pus in tag h1.
