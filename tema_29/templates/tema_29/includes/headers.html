@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="{% static 'tema_29/css/style.css' %}?v={{ version }}">
 </head>
 <body>
-    {% block content %}
-    
-    {% endblock %}
+
+    <main class="flex-grow-1">
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    {% include 'tema_29/includes/footer.html' %}
