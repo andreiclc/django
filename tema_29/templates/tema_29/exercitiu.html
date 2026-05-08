@@ -1,21 +1,28 @@
-{% extends 'tema_29/headers.html' %}
+{% extends 'tema_29/includes/headers.html' %}
 
 {% block content %}
 
-    <h1>numele meu este {{ nume }} si am {{ animale }} animale de companie</h1>
+    <div class="container mt-5">
 
-    {% if animale > 3 %}
+        <h1>numele meu este {{ nume }} si am {{ animale }} animale de companie</h1>
 
-        <p>si de aia sunt fericit</p>
+        {% if animale > 3 %}
 
-    {% elif animale == 0 %}
+            <p>si de aia sunt fericit</p>
 
-        <p>nu am animale</p>
+        {% elif animale == 0 %}
 
-    {% else %}
+            <p>nu am animale</p>
 
-        <p>am doar 1 animal</p>
+        {% else %}
 
-    {% endif %}
+            <p>am doar 1 animal</p>
+
+        {% endif %}
+
+    </div>
+
 
 {% endblock %}
+
+{% include 'tema_29/includes/footer.html' %}
