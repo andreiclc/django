@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+def exercitiu(request):
+    context = {
+        'nume': 'andrei',
+        'animale': 5,
+    }
+    return render(request, 'tema_29/exercitiu.html', context)

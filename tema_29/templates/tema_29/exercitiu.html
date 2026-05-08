@@ -1,0 +1,21 @@
+{% extends 'tema_29/headers.html' %}
+
+{% block content %}
+
+    <h1>numele meu este {{ nume }} si am {{ animale }} animale de companie</h1>
+
+    {% if animale > 3 %}
+
+        <p>si de aia sunt fericit</p>
+
+    {% elif animale == 0 %}
+
+        <p>nu am animale</p>
+
+    {% else %}
+
+        <p>am doar 1 animal</p>
+
+    {% endif %}
+
+{% endblock %}
