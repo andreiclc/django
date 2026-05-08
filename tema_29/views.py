@@ -2,6 +2,7 @@ from django.shortcuts import render
 from root import CONST
 
 def exercitiu(request):
+    """randare template exercitiu.html."""
     context = {
         'nume': 'andrei',
         'animale': 5,
