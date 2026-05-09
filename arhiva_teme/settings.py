@@ -110,4 +110,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [BASE_DIR / 'tema_29' / 'static']
+STATICFILES_DIRS = [
+    BASE_DIR / 'tema_29' / 'static',
+    BASE_DIR / 'tema_28' / 'static',
+]
