@@ -6,7 +6,7 @@ def exercitiu(request):
     context = {
         'nume': 'andrei',
         'animale': 5,
-        'titlu': CONST['nr_tema'],
+        'titlu': CONST['nr_tema_29'],
         'version': CONST['version'],
     }
     return render(request, 'tema_29/exercitiu.html', context)

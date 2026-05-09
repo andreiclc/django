@@ -1,0 +1,23 @@
+{% extends 'tema_28/includes/headers.html' %}
+
+{% block content %}
+
+    <div class="container mt-5 section1">
+        
+        <h2>useri cu 2 animale:</h2>
+
+        {% for user in users %}
+            <p> - {{ user.name }} - {{ user.date_of_birth }} - {{ user.number_of_pets }} animale</p>
+        {% endfor %}
+
+        <hr>
+
+        <h2 class="mt-4">useri nascuti pe "1999-11-21" cu 2 animale:</h2>
+
+        {% for user in users_filtered %}
+            <p> - {{ user.name }} - {{ user.date_of_birth }} - {{ user.number_of_pets }} animale</p>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
