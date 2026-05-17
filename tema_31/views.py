@@ -44,6 +44,12 @@ def add_movies(request):
     return redirect('movies')
 
 
+def delete_movies(request):
+    """eliminare date din tabele movie."""
+    Movie.objects.all().delete()
+    return redirect('movies')
+
+
 def movies(request):
     """randare template exercitiu.html."""
     all_movies = Movie.objects.all()

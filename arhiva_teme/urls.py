@@ -15,4 +15,5 @@ urlpatterns = [
     path('tema-30/edit/<uuid:pk>/', views_30.edit_book, name='edit_book'),
     path('tema-31/', views_31.movies, name='movies'),
     path('tema-31/add/', views_31.add_movies, name='add_movies'),
+    path('tema-31/delete/', views_31.delete_movies, name='delete_movies'),
 ]
