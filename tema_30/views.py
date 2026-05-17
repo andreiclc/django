@@ -39,6 +39,11 @@ def add_books(request):
     return redirect('books')
 
 
+def delete_books(request):
+    Book.objects.all().delete()
+    return redirect('books')
+
+
 def books(request):
     """randare template exercitiu.html."""
     all_books = Book.objects.all()
