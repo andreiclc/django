@@ -7,6 +7,7 @@ from root import CONST
 
 def add_movies(request):
     """populare tabela movie."""
+
     movies = [
         {
             'name_movie': 'The Lord of the Rings',
@@ -46,12 +47,27 @@ def add_movies(request):
 
 def delete_movies(request):
     """eliminare date din tabele movie."""
+
     Movie.objects.all().delete()
     return redirect('movies')
 
 
+def movie_detail(request, pk):
+    """layout detalii film"""
+
+    movie = Movie.objects.get(id=pk)
+    context = {
+        'titlu': CONST['nr_tema_31'],
+        'version': CONST['version'],
+        'movie': movie,
+    }
+    return render(request, 'tema_31/movie_details.html', context)
+
+
+
 def movies(request):
     """randare template exercitiu.html."""
+
     all_movies = Movie.objects.all()
     context = {
         'titlu': CONST['nr_tema_31'],

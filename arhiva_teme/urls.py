@@ -16,4 +16,5 @@ urlpatterns = [
     path('tema-31/', views_31.movies, name='movies'),
     path('tema-31/add/', views_31.add_movies, name='add_movies'),
     path('tema-31/delete/', views_31.delete_movies, name='delete_movies'),
+    path('tema-31/movie/<uuid:pk>/', views_31.movie_detail, name='movie_detail'),
 ]

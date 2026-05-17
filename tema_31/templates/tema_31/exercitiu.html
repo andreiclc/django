@@ -2,13 +2,20 @@
 
 {% block content %}
 
-    <div class="container mt-5 section1">
+    <div class="container-fluid mt-5 section1">
 
         <div class="text-center">
             <h1 class="fw-bolder">Lista Filme</h1>
         </div>
 
         <hr>
+
+        <div class="text-center">
+            <a href="{% url 'books' %}" class="btn btn-outline-light btn-sm mb-3">viziteaza bibliteca cu carti <i class="ri-add-line"></i></a>
+        </div>
+
+        <hr>
+
         <div>
             <a href="{% url 'add_movies' %}" class="btn btn-outline-success btn-sm mb-3">adauga filme <i class="ri-add-line"></i></a>
             <a href="{% url 'delete_movies' %}" class="btn btn-outline-danger btn-sm mb-3">sterge toate filmele <i class="ri-delete-bin-line"></i></a>
@@ -35,7 +42,7 @@
                             <td>{{ movie.name_movie }}</td>
                             <td>{{ movie.director }}</td>
                             <td>{{ movie.rating }}</td>
-                            <td>{{ movie.storyline }}</td>
+                            <td><a href="{% url 'movie_detail' movie.id %}">{{ movie.storyline|truncatechars:35 }}</a></td>
                             <td><span class="badge bg-success">{{ movie.release_date|date }}</span></td>
                         </tr>
                     {% endfor %}
