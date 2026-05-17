@@ -5,6 +5,7 @@ from root import CONST
 
 
 def add_books(request):
+    """populare tabela book."""
     books = [
         {
             'name': 'Dune',
@@ -40,13 +41,14 @@ def add_books(request):
 
 
 def delete_books(request):
+    """eliminare date din tabele book."""
     Book.objects.all().delete()
     return redirect('books')
 
 
-def books(request):
-    """randare template exercitiu.html."""
-    all_books = Book.objects.all()
+def books_after_2000(request):
+    """afisare carti publicate dupa anul 2000."""
+    all_books = Book.objects.filter(release_date__year__gt=2000)
     context = {
         'titlu': CONST['nr_tema_30'],
         'version': CONST['version'],
@@ -56,7 +58,14 @@ def books(request):
 
 
 
-
-
-
-
+def books(request):
+    """randare template exercitiu.html."""
+    all_books = Book.objects.all()
+    books_2000 = Book.objects.filter(release_date__year__gt=2000)
+    context = {
+        'titlu': CONST['nr_tema_30'],
+        'version': CONST['version'],
+        'books': all_books,
+        'books_2000': books_2000,
+    }
+    return render(request, 'tema_30/exercitiu.html', context)

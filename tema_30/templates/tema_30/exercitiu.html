@@ -4,20 +4,41 @@
 
     <div class="container mt-5 section1">
 
-        <h1 class="">Lista Book</h1>
+        <div class="text-center">
+            <h1 class="fw-bolder">Lista Book</h1>
+        </div>
 
         <hr>
         <div>
             <a href="{% url 'add_books' %}" class="btn btn-outline-success btn-sm mb-3">adauga carte</a>
             <a href="{% url 'delete_books' %}" class="btn btn-outline-danger btn-sm mb-3">sterge toate cartile</a>
         </div>
+
         <hr>
+
         <ul class="mt-3">
             {% for book in books %}
                 <li>{{ book.name }} - {{ book.author }} - {{ book.release_date|date }}</li>
             {% endfor %}
         </ul>
 
+        <hr>
+
+        {% if books_2000 %}
+            <div class="alert alert-warning" role="alert">
+
+                <div class="text-center">
+                    <h1 class="fw-bolder">Afisare carti lansate dupa : 2000</h1>
+                </div>
+
+                <ul class="mt-3">
+                    {% for book in books_2000 %}
+                        <li>{{ book.name }} - {{ book.author }} - {{ book.release_date|date }}</li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        {% endif %}
 
     </div>
 
