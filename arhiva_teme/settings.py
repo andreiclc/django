@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tema_28',
     'tema_29',
+    'tema_30',
 ]
 
 MIDDLEWARE = [
@@ -113,6 +114,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'tema_29' / 'static',
     BASE_DIR / 'tema_28' / 'static',
+    BASE_DIR / 'tema_29' / 'static',
+    BASE_DIR / 'tema_30' / 'static',
 ]
