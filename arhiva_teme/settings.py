@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'tema_28',
     'tema_29',
     'tema_30',
+    'tema_31',
 ]
 
 MIDDLEWARE = [
@@ -117,4 +118,5 @@ STATICFILES_DIRS = [
     BASE_DIR / 'tema_28' / 'static',
     BASE_DIR / 'tema_29' / 'static',
     BASE_DIR / 'tema_30' / 'static',
+    BASE_DIR / 'tema_31' / 'static',
 ]

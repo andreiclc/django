@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{{ nr_tema_31 }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'tema_31/css/style.css' %}?v={{ version }}">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+
+    <main class="flex-grow-1">
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    {% include 'tema_31/includes/footer.html' %}
