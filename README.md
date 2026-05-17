@@ -27,3 +27,15 @@
 --- 
 > (folosesc CRUD Operations ca am uuid)
 - folosire bootstrap.
+
+
+# task: tema 31
+
+--- 
+- stilizare pagini web folosind bootstrap. exemple:
+- pagina principala va contine un tabel cu lista de filme (de afisat cel putin titlul filmului)
+- posibilitatea de click pe orice film in care sa se faca redirectare catre pagina de detalii.
+- pagina de detalii va avea forma movie/<id>
+- pagina de detalii va contine toate detele din DB.
+- pagina separata pentru carti si una ptr filme, si accesare prin accesarea de btn.
+---
