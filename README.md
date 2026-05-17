@@ -23,5 +23,7 @@
 - creare tabela **book** cu +3 atribute printre care create_date , modifiy_date.
 - ruta noua pentru creare date (min 3 randuri diferite).
 - afisare cartidle din baza de date + o conditie precizata random.
-- adaugare ruta noua ptr actualizarea titlului unui carti cu id ul precizat in cale + noul titlu precizat in parametrii  de tip query.
+- adaugare ruta noua ptr actualizarea titlului unui carti cu id ul precizat in cale + noul titlu precizat in parametrii  de tip query. 
+--- 
+> (folosesc CRUD Operations ca am uuid)
 - folosire bootstrap.

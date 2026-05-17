@@ -1,0 +1,26 @@
+{% extends 'tema_30/includes/headers.html' %}
+
+{% block content %}
+
+    <div class="container mt-5 section1">
+
+        <div class="d-flex align-items-center justify-content-around">
+            <a href="{% url 'books' %}" class="btn btn-outline-light btn -sm">inapoi <i class="ri-arrow-left-line"></i></a>
+            
+            <h1 class="fw-bolder">editare carte: <strong class="text-success">{{ book.name }}</strong></h1>
+        </div>
+
+        <hr>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <input type="text" name="name" class="form-control mb-3" placeholder="nume nou">
+            <button type="submit" class="btn btn-outline-success btn-sm"> salvare <i class="ri-save-fill"></i></button>
+
+        </form>
+
+    </div>
+
+{% endblock %}

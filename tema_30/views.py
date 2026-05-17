@@ -57,6 +57,23 @@ def books_after_2000(request):
     return render(request, 'tema_30/exercitiu.html', context)
 
 
+def edit_book(request, pk):
+    """editare nume carte"""
+    book = Book.objects.get(id=pk)
+
+    if request.method == 'POST':
+        new_name = request.POST.get('name')
+        book.name = new_name
+        book.save()
+        return redirect('books')
+
+    context = {
+        'titlu': CONST['nr_tema_30'],
+        'version': CONST['version'],
+        'book': book,
+    }
+    return render(request, 'tema_30/edit_book.html', context)
+
 
 def books(request):
     """randare template exercitiu.html."""
