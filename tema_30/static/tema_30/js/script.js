@@ -1,5 +1,6 @@
 const editForm = document.getElementById("editForm");
 
+
 if (editForm) {
     const nameInput = document.getElementById("bookName");
     const nameError = document.querySelector(".nameError");
@@ -29,8 +30,9 @@ function Empty(input, label, errorClass) {
         errorClass.innerHTML = "";
         input.classList.remove("border-danger");
         return true;
-    }
+    }   
 }
+
 
 function MinLen(input, label, errorClass, min) {
     const fieldName = input.value.trim();
@@ -44,6 +46,7 @@ function MinLen(input, label, errorClass, min) {
         return true;
     }
 }
+
 
 function MaxLen(input, label, errorClass, max) {
     const fieldName = input.value.trim();

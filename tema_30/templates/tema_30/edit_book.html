@@ -18,15 +18,18 @@
 
             <input type="text" name="name" id="bookName" class="form-control mb-3" placeholder="nume nou">
             <span class="nameError text-danger small"></span>
+
+            <!-- https://docs.djangoproject.com/en/6.0/topics/forms/#rendering-fields-manually -->
+            {% for error in form.name.errors %}
+                <span class="text-danger small">{{ error }}</span>
+            {% endfor %}
+
             <br>
+
             <button type="submit" class="btn btn-outline-success btn-sm"> salvare <i class="ri-save-fill"></i></button>
 
         </form>
 
     </div>
-
-        <script>
-        console.log('test direct');
-    </script>
 
 {% endblock %}

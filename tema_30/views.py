@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from datetime import datetime, timezone
 from tema_30.models import Book
+from tema_30.forms import BookForm
 from root import CONST
 
 
@@ -58,19 +59,29 @@ def books_after_2000(request):
 
 
 def edit_book(request, pk):
-    """editare nume carte"""
+    """
+        - editare nume carte
+        - validare input name.
+    """
+
     book = Book.objects.get(id=pk)
 
-    if request.method == 'POST':
-        new_name = request.POST.get('name')
-        book.name = new_name
-        book.save()
-        return redirect('books')
+    if request.method == "POST":
+        form = BookForm(request.POST)
+
+        if form.is_valid():
+            book.name = form.cleaned_data['name']
+            book.save()
+            return redirect('books')
+        
+    else:
+        form = BookForm()
 
     context = {
         'titlu': CONST['nr_tema_30'],
         'version': CONST['version'],
         'book': book,
+        'form': form,
     }
     return render(request, 'tema_30/edit_book.html', context)
 
