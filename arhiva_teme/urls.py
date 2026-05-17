@@ -13,5 +13,6 @@ urlpatterns = [
     path('tema-30/add/', views_30.add_books, name='add_books'),
     path('tema-30/delete/', views_30.delete_books, name='delete_books'),
     path('tema-30/edit/<uuid:pk>/', views_30.edit_book, name='edit_book'),
-    path('tema-31/', views_31.movie, name='movie'),
+    path('tema-31/', views_31.movies, name='movies'),
+    path('tema-31/add/', views_31.add_movies, name='add_movies'),
 ]
