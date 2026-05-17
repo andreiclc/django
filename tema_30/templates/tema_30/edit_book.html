@@ -6,21 +6,27 @@
 
         <div class="d-flex align-items-center justify-content-around">
             <a href="{% url 'books' %}" class="btn btn-outline-light btn -sm">inapoi <i class="ri-arrow-left-line"></i></a>
-            
+
             <h1 class="fw-bolder">editare carte: <strong class="text-success">{{ book.name }}</strong></h1>
         </div>
 
         <hr>
 
-        <form method="POST">
+        <form method="POST" id="editForm">
 
             {% csrf_token %}
 
-            <input type="text" name="name" class="form-control mb-3" placeholder="nume nou">
+            <input type="text" name="name" id="bookName" class="form-control mb-3" placeholder="nume nou">
+            <span class="nameError text-danger small"></span>
+            <br>
             <button type="submit" class="btn btn-outline-success btn-sm"> salvare <i class="ri-save-fill"></i></button>
 
         </form>
 
     </div>
+
+        <script>
+        console.log('test direct');
+    </script>
 
 {% endblock %}
